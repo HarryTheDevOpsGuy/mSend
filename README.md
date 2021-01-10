@@ -1,5 +1,5 @@
 # mSend
- **Version**        : v0.3.6 <br>
+ **Version**        : v0.3.7 <br>
  **Release Date**   : 10-Jan-21 <br>
 mSend is tiny utility to send unlimited email.
 
@@ -10,7 +10,7 @@ mSend is tiny utility to send unlimited email.
 
 ##### Step - 1 Installation
 ```
-sudo curl -L "https://github.com/HarryTheDevOpsGuy/msend/raw/v0.3.6/msend" -o /usr/bin/msend
+sudo curl -L "https://github.com/HarryTheDevOpsGuy/msend/raw/v0.3.7/msend" -o /usr/bin/msend
 sudo chmod +x /usr/bin/msend
 msend -h
 ```
@@ -63,12 +63,23 @@ Here is sample msend.conf
 ```bash
 # Replace below variables and uncomment according to your credentials and details.
 
+# To Send email with AWS SES.
+# EMAIL_MODE='SES'
+# EMAIL_FROM='mSend <youremail@domain.com>'
+# AWS_DEFAULT_REGION='ap-south-1'
+# AWS_ACCESS_KEY_ID='yourAcess_key'
+# AWS_SECRET_ACCESS_KEY='YourAWS_secret_key'
+
+## To Send email with Gmail
 # EMAIL_SENDER_LIST=("your_smtp_auth_token" "your_smtp_auth_token2")
 # SENDER_NAME="Harry"
+
 # REPLY_EMAIL_ADDRESS="Harry <HarryTheDevOpsGuy@gmail.com>
+
 ```
 1. You can add multiple smtp credentials in `EMAIL_SENDER_LIST` variable.
 2. `REPLY_EMAIL_ADDRESS` is very important recipient will reply on this email id.
+3. if `EMAIL_MODE='SES'` You must install aws cli on your host.
 
 
 
@@ -82,13 +93,13 @@ Here is sample msend.conf
 
 #### About us
 * **Utility Name** : [mSend](https://github.com/harry41/mSend)
-* **Developed by** : [Harry](http://harry-thedevopsguy.blogspot.com/)
+* **Developed by** : [Harry](https://harrythedevopsguy.github.io)
 * **Email** : HarryTheDevOpsGuy@gmail.com
 * **Sponsored by** : [eSpoir Soft pvt Ltd](http://espoirsoft.com)
 
 #### Contributors
-  - Shankar
-  - Kapil
+  - Shankar Deo
+  - Kapil Yadav
   - Chandan Bisht
   - Satya
 
