@@ -1,6 +1,6 @@
 # mSend
- **Version**        : v0.5.5 <br>
- **Release Date**   : 26-Jan-21 <br>
+ **Version**        : v0.5.4 <br>
+ **Release Date**   : 27-Jan-21 <br>
 mSend is tiny utility to send unlimited email.
 
 
